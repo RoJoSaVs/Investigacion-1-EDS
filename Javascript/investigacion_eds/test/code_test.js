@@ -3,7 +3,7 @@ expect = require('chai').expect;
 should = require('chai').should;
 const assert = require('chai').assert; 
 const isSorted = require('../code').isSorted_shortcut;
-const bubbleSort = require('../code').bubbleSort_shortcut;
+const bubble_Sort = require('../code').bubble_Sort_shortcut;
 const selectionSort = require('../code').selectionSort_shortcut;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -119,7 +119,7 @@ describe('Algoritmos bubblesort', function()
 {
     it ('BubbleSort retorna el array ordenado', function()
     {
-        let bubbleSort = bblSort([6, 9, 2, 5, 3, 7, 1, 4, 8]);
+        let bubbleSort = bubble_Sort([6, 9, 2, 5, 3, 7, 1, 4, 8]);
         expect(bubbleSort).deep.to.equal([1, 2, 3, 4, 5, 6, 7, 8, 9]);
     });
 });
@@ -136,7 +136,7 @@ describe('Algoritmos de ordenamiento', function()
     {
         let array = [ 9, 5 , 3 , 7 , 1, 4 , 8]
         let selection = selectionSort(array);
-        let bubbleSort = bblSort(array);
+        let bubbleSort = bubble_Sort(array);
         expect(selection).deep.to.equal(bubbleSort);
     });
 });

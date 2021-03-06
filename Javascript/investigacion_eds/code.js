@@ -5,9 +5,9 @@ module.exports =
     {
         return isSorted(arr);
     },
-    bubbleSort_shortcut: function(arr)
+    bubble_Sort_shortcut: function(arr)
     {
-        return bubbleSort(arr);
+        return bubble_Sort(arr);
     },
     selectionSort_shortcut: function(arr)
     {
@@ -74,7 +74,7 @@ function selectionSort(items)
  * @param {Array} arr 
  * @returns Array ordenado de forma ascendente
  */
-function bubbleSort(arr){ 
+function bubble_Sort(arr){ 
     for(var i = 0; i < arr.length; i++)
     {
       for(var j = 0; j < ( arr.length - i -1 ); j++)
