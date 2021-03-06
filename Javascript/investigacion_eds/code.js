@@ -1,16 +1,13 @@
-// module.exports = function()
-// {
-//     return 'hello1';
-// }
+// Se exportan las funciones para ser llamadas desde otro directorio
 module.exports = 
 {
     isSorted_shortcut: function(arr)
     {
         return isSorted(arr);
     },
-    bblSort_shortcut: function(arr)
+    bubbleSort_shortcut: function(arr)
     {
-        return bblSort(arr);
+        return bubbleSort(arr);
     },
     selectionSort_shortcut: function(arr)
     {
@@ -18,6 +15,14 @@ module.exports =
     }
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @summary Verififca que un arreglo se encuentre ordenado de forma ascendente
+ * @param {Array} arr 
+ * @returns true si el array esta ordenado
+ */
 function isSorted(arr)
 {
     for (var i = 0; i < arr.length - 1; i++) 
@@ -30,6 +35,14 @@ function isSorted(arr)
     return true;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @summary Ordena un array de n numeros de forma ascendente utilizando el algoritmo de ordenamiento selectionsort
+ * @param {Array} items 
+ * @returns Array ordenado de forma ascendente
+ */
 function selectionSort(items)
 {  
     var length = items.length;
@@ -52,34 +65,27 @@ function selectionSort(items)
     }
     return items
 }
-// selectionSort([ 9, 5 , 3 , 7 , 1, 4 , 8])
 
-
-// Bubble sort Implementation using Javascript 
-// Creating the bblSort function 
-function bblSort(arr){ 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * @summary Ordena un array de n numeros de forma ascendente utilizando el algoritmo de ordenamiento bubblesort
+ * @param {Array} arr 
+ * @returns Array ordenado de forma ascendente
+ */
+function bubbleSort(arr){ 
     for(var i = 0; i < arr.length; i++)
     {
-      // Last i elements are already in place   
       for(var j = 0; j < ( arr.length - i -1 ); j++)
       {
-        // Checking if the item at present iteration  
-        // is greater than the next iteration 
         if(arr[j] > arr[j+1])
         {
-          // If the condition is true then swap them 
           var temp = arr[j] 
           arr[j] = arr[j + 1] 
           arr[j+1] = temp 
         } 
       } 
     } 
-    // Print the sorted array 
-    // console.log(arr); 
     return arr;
    } 
-
-// This is our unsorted array 
-// var arr = [234, 43, 55, 63,  5, 6, 235, 547]; 
-// Now pass this array to the bblSort() function 
-// bblSort(arr);
