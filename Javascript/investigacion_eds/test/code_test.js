@@ -37,30 +37,41 @@ describe('Pruebas al algortimo isSorted', function()
             let result = isSorted([5, 5, 5, 5, 5]);
             assert.isTrue(result);
         });
-
         it('Array con numeros repetidos desordenados', function()
         {
             let result = isSorted([5, 5, 5, 0, 0, 0]);
             assert.isFalse(result);
         });
-
         it('Array con numeros repetidos ordenados', function()
         {
             let result = isSorted([0, 0, 0, 5, 5, 5]);
+            assert.isTrue(result);
+        });
+        it('Array lleno con la misma letra', function()
+        {
+            let result = isSorted(['a', 'a', 'a', 'a', 'a', 'a']);
+            assert.isTrue(result);
+        });
+        it('Array con letras repetidas desordenadas', function()
+        {
+            let result = isSorted(['z', 'z', 'z', 'a', 'a', 'a']);
+            assert.isFalse(result);
+        });
+        it('Array con letras repetidas ordenadas', function()
+        {
+            let result = isSorted(['a', 'a', 'a', 'z', 'z', 'z']);
             assert.isTrue(result);
         });
     });
 
     describe('Pruebas con array lleno de letras', function()
     {
-        // El array esta ordenado -> true
         it ('Array ordenado con letras', function()
         {
             let result = isSorted(['a', 'b', 'c','d', 'e', 'f', 'g']);
             assert.isTrue(result);
         });
     
-         // El array esta desordenado -> false
         it('Array desordenado con letras', function()
         {
             let result = isSorted(['g', 'f', 'e', 'd', 'c', 'b', 'a']);
@@ -68,7 +79,6 @@ describe('Pruebas al algortimo isSorted', function()
         });
     });
 
-    // El array contiene un solo elemento -> true
     describe('Parametro con solo un elemento', function()
     {
         it('Array con solo un elemento', function()
@@ -97,46 +107,46 @@ describe('Pruebas al algortimo isSorted', function()
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-/**
- * @summary Verifica el algoritmo selectionsort retorne el array ordenado de manera ascendente
- */
- describe('Algoritmo selection sort', function()
- {
-     it ('SelectionSort retorna el array ordenado', function()
-     {
-         let selection = selectionSort([6, 9, 2, 5, 3, 7, 1, 4, 8]);
-         expect(selection).deep.to.equal([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-     });
- });
+// /**
+//  * @summary Verifica el algoritmo selectionsort retorne el array ordenado de manera ascendente
+//  */
+//  describe('Algoritmo selection sort', function()
+//  {
+//      it ('SelectionSort retorna el array ordenado', function()
+//      {
+//          let selection = selectionSort([6, 9, 2, 5, 3, 7, 1, 4, 8]);
+//          expect(selection).deep.to.equal([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+//      });
+//  });
 
  /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
- /**
- * @summary Verifica el algoritmo bubblesort retorne el array ordenado de manera ascendente
- */
-describe('Algoritmos bubblesort', function()
-{
-    it ('BubbleSort retorna el array ordenado', function()
-    {
-        let bubbleSort = bubble_Sort([6, 9, 2, 5, 3, 7, 1, 4, 8]);
-        expect(bubbleSort).deep.to.equal([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-    });
-});
+//  /**
+//  * @summary Verifica el algoritmo bubblesort retorne el array ordenado de manera ascendente
+//  */
+// describe('Algoritmos bubblesort', function()
+// {
+//     it ('BubbleSort retorna el array ordenado', function()
+//     {
+//         let bubbleSort = bubble_Sort([6, 9, 2, 5, 3, 7, 1, 4, 8]);
+//         expect(bubbleSort).deep.to.equal([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+//     });
+// });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-/**
- * @summary Verifica que los algoritmos bubblesort y selectionsort retornen el array igualmente ordenado
- */
-describe('Algoritmos de ordenamiento', function()
-{
-    it ('SelectionSort y BubbleSort retornan el mismo array ordenado', function()
-    {
-        let array = [ 9, 5 , 3 , 7 , 1, 4 , 8]
-        let selection = selectionSort(array);
-        let bubbleSort = bubble_Sort(array);
-        expect(selection).deep.to.equal(bubbleSort);
-    });
-});
+// /**
+//  * @summary Verifica que los algoritmos bubblesort y selectionsort retornen el array igualmente ordenado
+//  */
+// describe('Algoritmos de ordenamiento', function()
+// {
+//     it ('SelectionSort y BubbleSort retornan el mismo array ordenado', function()
+//     {
+//         let array = [ 9, 5 , 3 , 7 , 1, 4 , 8]
+//         let selection = selectionSort(array);
+//         let bubbleSort = bubble_Sort(array);
+//         expect(selection).deep.to.equal(bubbleSort);
+//     });
+// });
