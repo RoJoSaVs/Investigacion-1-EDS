@@ -4,8 +4,9 @@ package Lista_enlazada;
 public class Linked_List<T extends Comparable<T>> {
     private static Linked_List LinkedList;
     public Node head;
-    private Node tail;
+    public Node tail;
     public int length;
+
 
     public Node getHead() {
         return head;
@@ -28,8 +29,9 @@ public class Linked_List<T extends Comparable<T>> {
                 tmp = tmp.getNext();
             }
             tmp.next = new Node(value);
-            //tmp.next.prev = tmp;
+            tmp.next.prev = tmp;
             tail = tmp.getNext();
+
         }
     }
 
@@ -90,4 +92,8 @@ public class Linked_List<T extends Comparable<T>> {
             }
         }
     }
+
+
+
+
 }

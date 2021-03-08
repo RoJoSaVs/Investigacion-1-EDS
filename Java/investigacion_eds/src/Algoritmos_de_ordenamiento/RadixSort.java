@@ -20,30 +20,28 @@ public class RadixSort {
             new LinkedList() // 9
     };
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Object[] list = new Object[LENGTH];
-        for(int r=0; r < LENGTH; r++){
+        for (int r = 0; r < LENGTH; r++) {
             list[r] = new Random().nextInt(10 * 10);
         }
         Object[] sortedList = sort(list);
-        for(int i=0; i < sortedList.length; i++){
+        for (int i = 0; i < sortedList.length; i++) {
             System.out.println(sortedList[i]);
         }
     }
 
-    public static Object[] sort(Object[] list)
-    {
+    public static Object[] sort(Object[] list) {
         int maxDigits = getMaxDigits(list);
-        for(int r=1; r <= maxDigits; r++){
+        for (int r = 1; r <= maxDigits; r++) {
             int radix;
-            for(int n=0; n < list.length; n++){
+            for (int n = 0; n < list.length; n++) {
                 radix = getDigitAt(Integer.parseInt(list[n].toString()), r);
                 q[radix].offer(list[n]);
             }
-            int a=0;
-            for(int k=0; k < q.length; k++){
-                while(q[k].peek() != null){
+            int a = 0;
+            for (int k = 0; k < q.length; k++) {
+                while (q[k].peek() != null) {
                     list[a++] = q[k].poll();
                 }
             }
@@ -52,13 +50,12 @@ public class RadixSort {
 
     }
 
-    public static int getMaxDigits(Object list[])
-    {
+    public static int getMaxDigits(Object list[]) {
         int maxDigits = 0;
         int digits;
-        for(int i=0; i < list.length; i++){
+        for (int i = 0; i < list.length; i++) {
             digits = getDigits(Integer.parseInt(list[i].toString()));
-            if(digits > maxDigits){
+            if (digits > maxDigits) {
                 maxDigits = digits;
             }
         }
@@ -66,16 +63,14 @@ public class RadixSort {
     }
 
 
-    public static int getDigits(int i)
-    {
-        if(i < 10){
+    public static int getDigits(int i) {
+        if (i < 10) {
             return 1;
         }
         return 1 + getDigits(i / 10);
     }
 
-    public static int getDigitAt(int number, int radix)
-    {
-        return (int)(number / Math.pow(10,radix-1)) % 10;
+    public static int getDigitAt(int number, int radix) {
+        return (int) (number / Math.pow(10, radix - 1)) % 10;
     }
 }

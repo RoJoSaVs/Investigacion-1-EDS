@@ -1,4 +1,3 @@
-
 package Algoritmos_de_ordenamiento;
 
 import Lista_enlazada.Linked_List;
@@ -9,13 +8,13 @@ public class QuickSort {
     // The main function to sort a linked list. It mainly calls _quickSort()
     public static void quickSort(Linked_List list)
     {
-        _quickSort(list.getHead(), (Node) list.get(list.length - 1));
+        _quickSort(list.getHead(), list.tail);
     }
 
     private static Node partition(Node left, Node right)
     {
         Comparable x = right.getValue();
-        Node i = left.getPrev();
+        Node i = left.prev;
         for(Node j=left; j!=right; j=j.getNext())
         {
             if(j.getValue().compareTo(x) <= 0)
@@ -38,8 +37,10 @@ public class QuickSort {
     {
         if(right!=null && left!=right && left!=right.getNext()){
             Node temp = partition(left,right);
-            _quickSort(left,temp.getPrev());
+            _quickSort(left,temp.prev);
             _quickSort(temp.getNext(),right);
         }
     }
+
+
 }
