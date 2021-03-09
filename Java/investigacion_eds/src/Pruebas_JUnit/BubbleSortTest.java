@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test;
 class BubbleSortTest extends BubbleSort {
 
 
-    @Test
     /**
      * Prueba con un Integer
      */
+    @Test
     void Test_Single_Num() {
         Linked_List<Integer> list = new Linked_List<>();
         list.addLast(15);
@@ -18,10 +18,10 @@ class BubbleSortTest extends BubbleSort {
         list.printL();
     }
 
-    @Test
     /**
      * Prueba con solo una letra (CHAR)
      */
+    @Test
     void Test_Single_Char() {
         Linked_List<Character> list = new Linked_List<>();
         list.addLast('a');
@@ -29,10 +29,10 @@ class BubbleSortTest extends BubbleSort {
         list.printL();
     }
 
-    @Test
     /**
      * Prueba con solo un String
      */
+    @Test
     void Test_Single_Str() {
         Linked_List<String> list = new Linked_List<>();
         list.addLast("CE4101");
@@ -43,10 +43,10 @@ class BubbleSortTest extends BubbleSort {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    @Test
     /**
      * Prueba con varios Integer desordenados
      */
+    @Test
     void Test_Num_No_Sort() {
         Linked_List<Integer> list = new Linked_List<>();
         list.addLast(9);
@@ -64,10 +64,10 @@ class BubbleSortTest extends BubbleSort {
     }
 
 
-    @Test
     /**
      * Prueba con varios Integer ordenados
      */
+    @Test
     void Test_Num_Sort() {
         Linked_List<Integer> list = new Linked_List<>();
         list.addLast(0);
@@ -84,10 +84,10 @@ class BubbleSortTest extends BubbleSort {
         list.printL();
     }
 
-    @Test
     /**
      * Prueba con letras (CHAR) desordenados
      */
+    @Test
     void Test_Char_No_Sorted() {
         Linked_List<Character> list = new Linked_List<>();
         list.addLast('j');
@@ -104,10 +104,10 @@ class BubbleSortTest extends BubbleSort {
         list.printL();
     }
 
-    @Test
     /**
      * Prueba con letras (CHAR) ordenados
      */
+    @Test
     void Test_Char_Sorted() {
         Linked_List<Character> list = new Linked_List<>();
         list.addLast('a');
@@ -124,10 +124,10 @@ class BubbleSortTest extends BubbleSort {
         list.printL();
     }
 
-    @Test
     /**
      * Prueba con Strings desordenados
      */
+    @Test
     void Test_String_No_Sorted() {
         Linked_List<String> list = new Linked_List<>();
         list.addLast("jabonoso");
@@ -144,10 +144,10 @@ class BubbleSortTest extends BubbleSort {
         list.printL();
     }
 
-    @Test
     /**
      * Prueba con Strings ordenados
      */
+    @Test
     void Test_String_Sorted() {
         Linked_List<String> list = new Linked_List<>();
         list.addLast("asno");
@@ -168,10 +168,10 @@ class BubbleSortTest extends BubbleSort {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    @Test
     /**
      * Prueba con el mismo Integer
      */
+    @Test
     void Test_Same_Int() {
         Linked_List<Integer> list = new Linked_List<>();
         list.addLast(10);
@@ -181,10 +181,10 @@ class BubbleSortTest extends BubbleSort {
         list.printL();
     }
 
-    @Test
     /**
      * Prueba con el mismo caracter (CHAR)
      */
+    @Test
     void Test_Same_Char() {
         Linked_List<Character> list = new Linked_List<>();
         list.addLast('a');
@@ -194,10 +194,10 @@ class BubbleSortTest extends BubbleSort {
         list.printL();
     }
 
-    @Test
     /**
      * Prueba con el mismo String
      */
+    @Test
     void Test_Same_String() {
         Linked_List<String> list = new Linked_List<>();
         list.addLast("CE4101");
